@@ -41,8 +41,9 @@ class App extends Component {
     render() {
     	return(
     		<div id="main">
-    			{this.state.list.map(function (item, index) {
+				{this.state.list.map(function (item, index) {
 					if (item.percent >= 75) {
+						return (
 							<div key={index} className={item.percent >= 90 ? "bg-pink" : ""}>
 								<div className="name">
 									{item.name}
